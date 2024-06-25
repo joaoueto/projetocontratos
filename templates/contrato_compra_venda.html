@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Compra e Venda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Contrato de Compra e Venda</h2>
+        <form action="/gerar_contrato_compra_venda" method="post">
+
+            <label for="nome_vendedor">Nome do Vendedor:</label><br>
+            <input type="text" id="nome_vendedor" name="nome_vendedor" required><br>
+
+             <label for="estado_civil_vendedor">Estado Civil do Vendedor:</label>
+             <select id="estado_civil_vendedor" name="estado_civil_vendedor">
+                <option value="solteiro">Solteiro</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="viuvo">Viúvo</option>
+                <option value="uniao_estavel">Em União Estável</option>
+             </select>
+
+            <label for="profissão_vendedor">Profissão do Vendedor:</label><br>
+            <input type="text" id="profissão_vendedor" name="profissão_vendedor" required><br>
+
+            <label for="cpf_vendedor">CPF do Vendedor:</label><br>
+            <input type="text" id="cpf_vendedor" name="cpf_vendedor" required><br>
+
+            <label for="endereco_vendedor">Endereço do Vendedor:</label><br>
+            <input type="text" id="endereco_vendedor" name="endereco_vendedor" required><br>
+
+            <label for="nome_comprador">Nome do Comprador:</label><br>
+            <input type="text" id="nome_comprador" name="nome_comprador" required><br>
+
+            <label for="estado_civil_comprador">Estado Civil do Comprador:</label>
+            <select id="estado_civil_comprador" name="estado_civil_comprador">
+              <option value="solteiro">Solteiro</option>
+              <option value="casado">Casado</option>
+              <option value="divorciado">Divorciado</option>
+              <option value="viuvo">Viúvo</option>
+              <option value="uniao_estavel">Em União Estável</option>
+            </select>
+
+
+            <label for="profissão_comprador">Profissão do Comprador:</label><br>
+            <input type="text" id="profissão_comprador" name="profissão_comprador" required><br>
+
+            <label for="cpf_comprador">CPF do Comprador:</label><br>
+            <input type="text" id="cpf_comprador" name="cpf_comprador" required><br>
+
+            <label for="endereco_comprador">Endereço do Comprador:</label><br>
+            <input type="text" id="endereco_comprador" name="endereco_comprador" required><br>
+
+
+            <label for="valor_compra">Valor da Compra:</label><br>
+            <input type="text" id="valor_compra" name="valor_compra" required><br>
+
+            <input type="submit" value="Gerar Contrato">
+        </form>
+    </div>
+</body>
+</html>
+

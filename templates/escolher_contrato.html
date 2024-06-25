@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Tipo de Contrato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Escolher Tipo de Contrato</h1>
+        <form action="{{ url_for('escolher_contrato') }}" method="POST">
+            <label for="tipo_contrato">Tipo de Contrato:</label>
+            <select name="tipo_contrato" id="tipo_contrato">
+                <option value="compra_venda">Compra e Venda</option>
+                <option value="aluguel">Aluguel</option>
+            </select>
+            <button type="submit" class="button">Selecionar</button>
+        </form>
+    </div>
+</body>
+</html>

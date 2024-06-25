@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Preencha os dados para o contrato</h1>
+    <form action="{{ url_for('gerar_contrato_compra_venda') }}" method="POST">
+         <label for="nome_vendedor">Nome do Vendedor:</label>
+        <input type="text" id="nome_vendedor" name="nome_vendedor" required><br><br>
+
+        <label for="nacionalidade_vendedor">Nacioalidade do Vendedor:</label>
+        <input type="text" id="nacionalidade_vendedor" name="nacionalidade_vendedor" required><br><br>
+
+        <fieldset>
+            <legend>Estado Civil do Vendedor:</legend>
+            <label><input type="radio" name="estado_civil_vendedor" value="solteiro" required> Solteiro</label><br>
+            <label><input type="radio" name="estado_civil_vendedor" value="casado"> Casado</label><br>
+            <label><input type="radio" name="estado_civil_vendedor" value="divorciado"> Divorciado</label><br>
+            <label><input type="radio" name="estado_civil_vendedor" value="viuvo"> Viúvo</label><br>
+            <label><input type="radio" name="estado_civil_vendedor" value="uniao_estavel"> União Estável</label><br>
+        </fieldset><br>
+
+        <label for="profissao_vendedor">Profissão do Vendedor:</label>
+        <input type="text" id="profissao_vendedor" name="profissao_vendedor" required><br><br>
+
+        <label for="cpf_vendedor">CPF do Vendedor:</label>
+        <input type="text" id="cpf_vendedor" name="cpf_vendedor" required><br><br>
+
+        <label for="endereco_vendedor">Endereço do Vendedor:</label>
+        <input type="text" id="endereco_vendedor" name="endereco_vendedor" required><br><br>
+
+        <-- Comprador -->
+        <label for="nome_comprador">Nome do Comprador:</label>
+        <input type="text" id="nome_comprador" name="nome_comprador" required><br><br>
+
+        <label for="nacionalidade_comprador">Nacionalidade do Comprador:</label>
+        <input type="text" id="nacionalidade_comprador" name="nacionalidade_comprador" required><br><br>
+
+        <fieldset>
+            <legend>Estado Civil do Comprador:</legend>
+            <label><input type="radio" name="estado_civil_comprador" value="solteiro" required> Solteiro</label><br>
+            <label><input type="radio" name="estado_civil_comprador" value="casado"> Casado</label><br>
+            <label><input type="radio" name="estado_civil_comprador" value="divorciado"> Divorciado</label><br>
+            <label><input type="radio" name="estado_civil_comprador" value="viuvo"> Viúvo</label><br>
+            <label><input type="radio" name="estado_civil_comprador" value="uniao_estavel"> União Estável</label><br>
+        </fieldset><br>
+
+        <label for="profissao_comprador">Profissão do Comprador:</label>
+        <input type="text" id="profissao_comprador" name="profissao_comprador" required><br><br>
+
+        <label for="cpf_comprador">CPF do Comprador:</label>
+        <input type="text" id="cpf_comprador" name="cpf_comprador" required><br><br>
+
+        <label for="endereco_comprador">Endereço do Comprador:</label>
+        <input type="text" id="endereco_comprador" name="endereco_comprador" required><br><br>
+
+        <label for="descricao_detalhada_do_bem">Descrição do Bem:</label>
+        <input type="text" id="descricao_detalhada_do_bem" name="descricao_detalhada_do_bem" required><br><br>
+
+
+        <label for="endereco_imovel">Endereço do Imóvel:</label>
+        <input type="text" id="endereco_imovel" name="endereco_imovel" required><br><br>
+
+        <label for="valor_venda">Valor da Venda:</label>
+        <input type="text" id="valor_venda" name="valor_venda" required><br><br>
+
+
+        <label for="condicoes_pagamento">Condições de Pagamento:</label>
+        <textarea id="condicoes_pagamento" name="condicoes_pagamento" required></textarea><br><br>
+
+        <label for="data_de_entrega">Data de Entrega:</label>
+        <input type="text" id="data_de_entrega" name="data_de_entrega" required><br><br>
+
+        <label for="percentual">Percentual:</label>
+        <input type="text" id="percentual" name="percentual" required><br><br>
+
+        <label for="cidade_contrato">Cidade do Contrato:</label>
+        <input type="text" id="cidade_contrato" name="cidade_contrato" required><br><br>
+
+        <label for="data_contrato">Data do Contrato:</label>
+        <input type="date" id="data_contrato" name="data_contrato">
+        <input type="submit" value="Enviar">
+
+          <input type="submit" value="Gerar Contrato">
+
+    </form>
+</body>
+</html>

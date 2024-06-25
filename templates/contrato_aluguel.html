@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Aluguel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Contrato de Aluguel</h2>
+        <form action="/gerar_contrato_aluguel" method="post">
+            <label for="nome_locador">Nome do Locador:</label><br>
+            <input type="text" id="nome_locador" name="nome_locador" required><br>
+
+            <label for="cpf_locador">CPF do Locador:</label><br>
+            <input type="text" id="cpf_locador" name="cpf_locador" required><br>
+
+            <label for="endereco_imovel">Endereço do Imóvel:</label><br>
+            <textarea id="endereco_imovel" name="endereco_imovel" rows="3" required></textarea><br>
+
+            <label for="valor_aluguel">Valor do Aluguel:</label><br>
+            <input type="text" id="valor_aluguel" name="valor_aluguel" required><br>
+
+            <input type="submit" value="Gerar Contrato">
+        </form>
+    </div>
+</body>
+</html>
