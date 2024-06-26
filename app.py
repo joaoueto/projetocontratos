@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, redirect, url_for
 from docx import Document
 from datetime import datetime
 
@@ -57,8 +57,17 @@ def gerar_contrato_compra_venda():
         # Salvar o documento gerado
         document.save(output_path)
 
-        # Download do arquivo gerado
-        return send_file(output_path, as_attachment=True)
+        # Redirecionar para a página de download
+        return redirect(url_for('download_contrato', filename='contrato_compra_venda.docx'))
+
+@app.route('/download_contrato/<filename>')
+def download_contrato(filename):
+    return render_template('download_contrato.html', filename=filename)
+
+@app.route('/baixar_contrato/<filename>')
+def baixar_contrato(filename):
+    filepath = f'documentos/{filename}'
+    return send_file(filepath, as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
