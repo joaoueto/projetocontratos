@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, send_file, redirect, url_for
 from docx import Document
 from datetime import datetime
 
@@ -34,7 +34,7 @@ def gerar_contrato_compra_venda():
             'estado_civil_comprador': request.form['estado_civil_comprador'],
             'profissao_comprador': request.form['profissao_comprador'],
             'cpf_comprador': request.form['cpf_comprador'],
-            'endereco_vendedor': request.form['endereco_comprador'],
+            'endereco_comprador': request.form['endereco_comprador'],
             'descricao_detalhada_do_bem': request.form['descricao_detalhada_do_bem'],
             'endereco_imovel': request.form['endereco_imovel'],
             'valor_venda': request.form['valor_venda'],
